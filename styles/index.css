@@ -1,0 +1,41 @@
+body {
+  margin: 0 50px;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 90px;
+}
+header .logo {
+  font-size: 2.5em;
+  font-family: "Rancho", cursive;
+  color: #0065fc;
+  margin-top: 35px;
+}
+header a {
+  text-decoration: none;
+  color: unset;
+}
+.navBar {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0px 30px;
+  font-size: 1em;
+  font-family: sans-serif;
+  padding-top: 45px;
+  border-top: 2px solid transparent;
+}
+ul li.navBar__link:hover {
+  color: #0065fc;
+  border-top: 2px solid #0065fc;
+}
+.navBar__link--subscribe {
+  color: #0065fc;
+  font-weight: bold;
+}
