@@ -1,16 +1,20 @@
 body {
-  margin: 0 50px;
-  padding: 0;
+  max-width: 1200px;
+  margin: auto;
   font-family: sans-serif;
 }
-section {
-  margin-top: 20px;
+main {
+  max-width: 1100px;
+  margin: auto;
 }
+
 header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  max-width: 1100px;
   height: 90px;
+  padding-bottom: 15px;
+  margin: auto;
 }
 header .logo {
   font-size: 2.5em;
@@ -28,8 +32,8 @@ header a {
   margin: 0;
   padding: 0;
 }
-ul li {
-  margin: 0px 30px;
+header li {
+  margin-left: 60px;
   font-size: 1em;
   padding-top: 45px;
   border-top: 2px solid transparent;
@@ -45,16 +49,18 @@ ul li.navBar__link:hover {
 /**************/
 /**SearchArea**/
 /**************/
+section {
+  padding: 15px 0;
+}
 h1 {
   margin: 0;
+  font-size: 20px;
 }
 
 form {
   display: flex;
-  vertical-align: middle;
   height: 60px;
   width: max-content;
-  align-items: center;
   margin-bottom: 30px;
 }
 form div.icon__locate {
@@ -62,68 +68,56 @@ form div.icon__locate {
   height: 50px;
   width: 50px;
   background-color: #e9ecef;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 20px 0 0 20px;
 }
 .fas.fa-map-marker-alt {
-  margin: auto auto;
+  margin: auto;
 }
 input {
-  display: inline-block;
-  height: 44px;
-  border: none;
-  border-top: 2px solid #f2f2f2;
-  border-bottom: 2px solid #f2f2f2;
-  font-size: 1.1em;
-  padding-left: 20px;
-  margin: 0;
+  height: 46px;
+  border: solid #f2f2f2;
+  border-width: 2px 0 2px 0;
+  padding: 0 0 0 20px;
   font-weight: bold;
-  color: black;
+  font-size: 1.1em;
 }
 button {
-  display: inline-block;
   height: 50px;
   border: none;
   background-color: #0065fc;
+  border-radius: 0 20px 20px 0;
+  padding: 0 20px;
   color: white;
   font-size: 1.1em;
-  padding: 0 20px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 .filterList {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
 }
 .filterList__choice {
-  border: 2px solid #deebff;
-  border-radius: 50px;
-  margin: 0 0;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  padding: 0 0;
-  padding-right: 10px;
   display: flex;
   align-items: center;
+  height: 50px;
+  border: solid #f2f2f2;
+  border-width: 3px 3px 3px 0;
+  border-radius: 56px;
+  margin: 0 20px 20px 0;
+  padding: 0 10px 0 0;
   font-weight: bold;
 }
-.inconBackground {
-  width: 52px;
-  height: 52px;
-  background-color: #deebff;
-  border-radius: 52px;
-  margin-right: 20px;
+.iconBackground {
   display: flex;
+  background-color: #deebff;
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+  margin: 0 20px 0 0;
 }
-.fa-solid.fa-heart,
-.fa-solid.fa-money-bill-wave,
-.fa-solid.fa-child,
-.fa-solid.fa-dog,
-.fa-solid.fa-info {
-  margin: auto auto;
+.fas {
+  margin: auto;
   color: #0065fc;
 }
 .filterList__choice--title {
@@ -137,10 +131,9 @@ button {
   display: flex;
   width: 23px;
   height: 23px;
-  height: 23px;
-  border-radius: 15px;
+  border-radius: 23px;
   border: 1px solid #deebff;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 /*******************/
 /**grille résultat**/
@@ -150,16 +143,14 @@ button {
   justify-content: space-between;
 }
 #mainResults {
-  display: inline-block;
   width: 60%;
-  height: min-content;
-  min-height: 525px;
-  padding: 20px 40px;
-  margin: 0;
+  height: max-content;
+  min-height: 300px;
+  padding: 30px;
   background-color: #f2f2f2;
   border-radius: 20px;
 }
-#mainResults .container {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -168,34 +159,33 @@ button {
 .mainResults__item {
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 160px;
+  width: 210px;
+  height: 180px;
   margin-bottom: 40px;
 }
 .mainResults__imageBox {
-  width: 100%;
-  height: 65%;
+  width: 210px;
+  height: 108px;
+  margin: 0;
 }
 #mainResults img {
-  width: 100%;
-  height: 100%;
+  width: 204px;
+  height: 102px;
   object-fit: cover;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 20px 20px 0 0;
   border: 3px solid white;
   box-shadow: 5px 5px 10px #dee2e6;
 }
 .mainResults__item__description {
   background-color: white;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 0 0 20px 20px;
   border: 3px solid white;
-  padding: 0 5%;
-  height: 35%;
-  width: 90%;
+  padding: 0 10px;
+  width: 184px;
+  height: 66px;
   box-shadow: 5px 5px 10px #dee2e6;
 }
-#results h3 {
+h3 {
   padding: 0;
   margin: 0;
   font-size: 0.9em;
@@ -203,55 +193,52 @@ button {
 #results p {
   padding: 0;
   margin: 0;
-  margin-top: 5px;
+  margin: 5px 0 0 0;
   font-size: 0.85em;
 }
-.fa-solid.fa-star {
-  color: #0065fc;
+.fas.fa-star {
   font-size: 0.6em;
 }
-.fa-regular.fa-star {
-  color: grey;
-  font-size: 0.6em;
+.fas.fa-star.unreachedScore {
+  color: lightgrey;
 }
 #mostPopResults {
-  width: 27%;
-  height: min-content;
-  min-height: 525px;
-  padding: 20px 20px;
+  width: 25%;
+  min-width: min-content;
+  height: inherit;
+  padding: 30px;
   margin: 0;
   background-color: #f2f2f2;
   border-radius: 20px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
+
 .mostPopResults__tiltle {
   display: flex;
   justify-content: space-between;
 }
 .fas.fa-chart-line {
-  font-size: 24px;
+  font-size: 23px;
+  color: black;
 }
-#mostPopResults .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-}
+
 .mostPopResults__item {
   display: flex;
-  width: 370px;
-  height: 125px;
-  margin-bottom: 20px;
+  width: 270px;
+  height: 130px;
+  margin: 0 0 20px 0;
 }
 .mostPop__imageBox {
-  width: 35%;
-  height: 100%;
+  width: 105px;
+  height: 130px;
+  margin: 0;
 }
 #mostPopResults img {
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-
-  width: 100%;
-  height: 100%;
+  border-radius: 20px 0 0 20px;
+  width: 99px;
+  height: 124px;
   object-fit: cover;
   border: 3px solid white;
   box-shadow: 5px 5px 10px #dee2e6;
@@ -262,12 +249,10 @@ button {
   justify-content: space-between;
   background-color: white;
   border: 3px solid white;
-  width: 60%;
-  height: 115px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  padding-left: 10px;
-  padding-top: 10px;
+  width: 149px;
+  height: 114px;
+  border-radius: 0 20px 20px 0;
+  padding: 10px 0 0 10px;
   box-shadow: 5px 5px 10px #dee2e6;
 }
 
@@ -280,48 +265,81 @@ button {
   justify-content: space-between;
   width: 100%;
   height: max-content;
-  margin-top: 20px;
-  border-radius: 20px;
+  margin: 20px 0 0 0;
 }
 .activities__item {
   display: flex;
   flex-direction: column;
   height: max-content;
-  width: 265px;
+  width: 250px;
 }
 .activities__imageBox {
   width: 100%;
   height: 350px;
+  margin: 0;
 }
-.activities__imageBox50 {
+.activities__imageBox150 {
   height: 150px;
 }
-.activities__imageBox40 {
+.activities__imageBox130 {
   height: 130px;
 }
-.activities__imageBox30 {
+.activities__imageBox100 {
   height: 100px;
 }
 #activities img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px 20px 0 0;
   box-shadow: 5px 5px 10px #dee2e6;
-  position: static;
 }
 .activities__item__description {
-  height: 20px;
+  height: 30px;
   background-color: white;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 0 0 20px 20px;
   box-shadow: 5px 5px 10px #dee2e6;
-  font-weight: bold;
-  padding: 15px 20px;
+  padding: 10px 20px;
 }
 .activities__2itemsPresentation {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+/**************/
+/***footer***/
+/************/
+footer nav {
+  max-width: 900px;
+  padding: 20px 300px 0 0;
+  margin: 40px 0 0 0;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer ul {
+  margin: 0;
+  padding: 25px 0 25px 50px;
+}
+footer h3 {
+  padding-bottom: 15px;
+}
+.footer__section li {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  text-decoration: unset;
+}
+.footer__section a {
+  text-decoration: none;
+  color: unset;
+}
+
+/*
+revoir la taille des boites 
+par rapport aux tailles des contenants (taille relative ou absolue?)
+(ex les item_description dans aside)
+police = railway
+
+*/
